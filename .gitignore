@@ -1,0 +1,61 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+
+# Logs
+logs/
+*.log
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# General
+.idea/
+*.swp
+*.swo
+
+# DevOps
+devops/docker/*.log
+devops/docker/*.tmp
+devops/docker/*.bak
+devops/docker/.env
+devops/docker/.terraform/
+devops/docker/.terraform.lock.hcl
+devops/docker/terraform.tfstate
+devops/docker/terraform.tfstate.*
+devops/docker/crash.log
+devops/docker/override.tf
+devops/docker/override.tf.json
+devops/docker/*_override.tf
+devops/docker/*_override.tf.json
+devops/docker/.terraformrc
+devops/docker/terraform.rc
