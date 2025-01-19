@@ -22,12 +22,12 @@ jobs:
 
     - name: Build and push backend image
       run: |
-        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/backend-avatares:latest -f avatares-devop-az/devops/docker/Dockerfile-Backend .
+        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/backend-avatares:latest -f /devops/docker/Dockerfile-Backend .
         docker push ${{ secrets.ACR_LOGIN_SERVER }}/backend-avatares:latest
 
     - name: Build and push frontend image
       run: |
-        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/frontend-avatares:latest -f avatares-devops-az/devops/docker/Dockerfile-Frontend .
+        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/frontend-avatares:latest -f /devops/docker/Dockerfile-Frontend .
         docker push ${{ secrets.ACR_LOGIN_SERVER }}/frontend-avatares:latest
 
   deploy:
