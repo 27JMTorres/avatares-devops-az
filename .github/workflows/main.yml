@@ -10,14 +10,6 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: Azure login
-      uses: azure/login@v2
-      with:
-        auth-type: IDENTITY
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-        enable-AzPSSession: true
-
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -40,9 +32,17 @@ jobs:
 
   deploy:
     needs: build-and-push
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
+    - name: Azure login
+      uses: azure/login@v2
+      with:
+        auth-type: IDENTITY
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        enable-AzPSSession: true
+
     - name: Checkout code
       uses: actions/checkout@v2
 
