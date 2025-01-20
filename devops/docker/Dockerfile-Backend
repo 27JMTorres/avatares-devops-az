@@ -1,19 +1,19 @@
-# Usa una imagen base oficial de Python
+# Usar una oficial de Python
 FROM python:3.10-slim
 
-# Establece el directorio de trabajo
+# Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copia los archivos necesarios
+# Copiar los archivos necesarios
 COPY ../../api/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY ../../api .
 
-# Establece las variables de entorno
+# Establecer las variables de entorno
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
 
-# Expone el puerto del backend
+# Exponer el puerto del backend
 EXPOSE 5000
 
 # Comando para ejecutar la aplicación
