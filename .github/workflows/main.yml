@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: Azure login
       uses: azure/login@v2
@@ -24,3 +24,4 @@ jobs:
         azcliversion: latest
         inlineScript: |
           az account show
+          # You can write your Azure CLI inline scripts here.
