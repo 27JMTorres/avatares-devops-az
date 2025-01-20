@@ -50,6 +50,10 @@ jobs:
       working-directory: devops/terraform
       run: terraform init
 
+    - name: Terraform Import Service Plan
+      working-directory: devops/terraform
+      run: terraform import azurerm_service_plan.asp /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/resourceGroups/AvataresResourcesGroup/providers/Microsoft.Web/serverfarms/AvataresAppServicePlan
+
     - name: Terraform Plan
       working-directory: devops/terraform
       run: terraform plan -out=tfplan
