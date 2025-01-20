@@ -15,13 +15,10 @@ jobs:
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         enable-AzPSSession: true
-
-    # Azure CLI action only supports linux self-hosted runners for now.
-    # If you want to execute the Azure CLI script on a windows self-hosted runner, you can execute it directly in `run`.
+        
     - name: Azure CLI script
       uses: azure/cli@v2
       with:
         azcliversion: latest
         inlineScript: |
           az account show
-          # You can write your Azure CLI inline scripts here.
