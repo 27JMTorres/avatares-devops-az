@@ -24,4 +24,3 @@ jobs:
         azcliversion: latest
         inlineScript: |
           az account show
-          # You can write your Azure CLI inline scripts here.
