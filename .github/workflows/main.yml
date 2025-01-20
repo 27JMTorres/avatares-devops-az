@@ -23,5 +23,6 @@ jobs:
       with:
         azcliversion: latest
         inlineScript: |
+          az login --identity --allow-no-subscriptions
           az account show
-          # Commentary expample
+          # Commentary example
