@@ -29,7 +29,7 @@ data "azurerm_container_registry" "acr" {
 # Crear un plan de App Service
 resource "azurerm_service_plan" "asp" {
   name                = "AvataresAppServicePlan"
-  location            = "westus"
+  location            = "eastus"
   resource_group_name = data.azurerm_resource_group.rg.name
   os_type             = "Linux"
   sku_name            = "B2"
@@ -38,7 +38,7 @@ resource "azurerm_service_plan" "asp" {
 # Crear una App Service para el backend
 resource "azurerm_linux_web_app" "backend" {
   name                = "avatares-backend-service"
-  location            = "westus"
+  location            = "eastus"
   resource_group_name = data.azurerm_resource_group.rg.name
   service_plan_id     = azurerm_service_plan.asp.id
 
@@ -63,7 +63,7 @@ resource "azurerm_linux_web_app" "backend" {
 # Crear una App Service para el frontend
 resource "azurerm_linux_web_app" "frontend" {
   name                = "avatares-frontend-service"
-  location            = "westus"
+  location            = "eastus"
   resource_group_name = data.azurerm_resource_group.rg.name
   service_plan_id     = azurerm_service_plan.asp.id
 
