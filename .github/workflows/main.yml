@@ -69,3 +69,9 @@ jobs:
     - name: Terraform Apply
       working-directory: devops/terraform
       run: terraform apply -input=false tfplan
+
+    - name: Restart Backend Web App
+      run: az webapp restart --name avatares-backend-service --resource-group AvataresResourcesGroup
+
+    - name: Restart Frontend Web App
+      run: az webapp restart --name avatares-frontend-service --resource-group AvataresResourcesGroup
