@@ -11,6 +11,7 @@ terraform {
 
 provider "azurerm" {
   features {}
+  use_msi = true
   subscription_id = var.subscription_id
 }
 
