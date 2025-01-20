@@ -1,4 +1,6 @@
-# DevOps Final Project
+# Propósito del proyecto
+
+El principal objetivo de este proyecto es experimentar y poner a prueba los conocimientos adquiridos en el Boot Camp de DevOps para lograr establecer un flujo de Integración y Entrega continua dentro del ciclo de desarrollo de una aplicación web que crea avatares.
 
 ## Descripción del Proyecto
 
@@ -204,11 +206,3 @@ EXPOSE 5000
 # Comando para ejecutar la aplicación
 CMD ["flask", "run", "--host=0.0.0.0"]
 ```
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para discutir cualquier cambio que te gustaría realizar.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
