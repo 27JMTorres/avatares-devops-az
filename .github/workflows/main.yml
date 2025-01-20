@@ -56,4 +56,4 @@ jobs:
 
     - name: Terraform Apply
       working-directory: devops/terraform
-      run: terraform apply -input=false tfplan
+      run: terraform apply -input=false -replace="azurerm_linux_web_app.backend" -replace="azurerm_linux_web_app.frontend" -replace="azurerm_service_plan.asp" tfplan
